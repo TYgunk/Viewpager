@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical"
+    tools:context=".log_in">
+
+    <RelativeLayout
+        android:id="@+id/log_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/log_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/setofont"
+            android:gravity="center"
+            android:text="登入"
+            android:textColor="@color/black"
+            android:textSize="70sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/log_in_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/log_text">
+
+        <EditText
+            android:id="@+id/gmail_log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginVertical="20dp"
+            android:background="@drawable/edittext_background"
+            android:fontFamily="@font/setofont"
+            android:hint="電子信箱"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gmail_log">
+
+            <EditText
+                android:id="@+id/passwd_log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="20dp"
+                android:background="@drawable/edittext_background"
+                android:fontFamily="@font/setofont"
+                android:hint="密碼"
+                android:padding="10dp"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/eye_passwd_log"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/passwd_log"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="22.5dp"
+                android:src="@drawable/eye_show" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/log_in_current_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/log_in_information"
+        android:gravity="center">
+
+        <android.widget.Button
+            android:onClick="log_in_check"
+            android:id="@+id/log_in_current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round"
+            android:fontFamily="@font/setofont"
+            android:text="登入"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:onClick="SignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/log_in_current_box"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/setofont"
+        android:gravity="center"
+        android:text="還沒有帳號嗎，立即註冊一個"
+        android:textSize="15sp" />
+</RelativeLayout>
